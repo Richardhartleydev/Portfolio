@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@300;400&family=Open+Sans:wght@500&display=swap");
+
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: var(--ff-base);
+  border: none;
+}
+
+:root {
+  --ff-title: "Lora", sans-serif;
+  --ff-base: "Montserrat", sans-serif;
+
+  /* add more */
+}
+
+body {
+  background-color: white;
+}
+
+.navbar {
+  padding: 1.5rem;
+  background-color: #3c6e71;
+  display: flex;
+  justify-content: space-between;
+  opacity: 90%;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.page-links {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.page-links a {
+  display: inline-block;
+  position: relative;
+  font-family: var(--ff-title);
+  font-size: 21px;
+  text-decoration: none;
+  color: black;
+}
+
+#about:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -0.5rem;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#about:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#projects:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -0.5rem;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#projects:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#contact:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -0.5rem;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#contact:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.icon-links {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+}
+
+.name-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.color-name-container {
+  background-color: #bee1e6;
+}
+
+h1 {
+  font-family: var(--ff-title);
+  color: white;
+  letter-spacing: 0.1rem;
+  max-width: 860px;
+  font-size: 60px;
+  display: inline-block;
+  padding-top: 75px;
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--ff-title);
+  padding: 1rem;
+}
+
+.my-name-container {
+  padding: 7rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-div {
+  position: relative;
+}
+
+.line-div:after {
+  content: "";
+  position: absolute;
+}
+
+.line-div,
+.line-div:after {
+  height: 80px;
+  width: 100%;
+}
+
+@media (min-width: 520px) {
+  .line-div,
+  .line-div:after {
+    height: 120px;
+  }
+}
+
+@media (min-width: 900px) {
+  .line-div,
+  .line-div:after {
+    height: 160px;
+  }
+}
+
+.line-div {
+  background-color: white;
+}
+
+.line-div:after {
+  background-color: #bee1e6;
+  -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
+  clip-path: polygon(100% 100%, 100% 0, 0 0);
+}
+
+.container-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 300px;
+  padding-right: 300px;
+  gap: 2rem;
+  padding-bottom: 100px;
+}
+
+.details-container h2 {
+  margin: 0.5rem;
+  padding-left: 300px;
+}
+
+.details-container h3 {
+  margin: 0.5rem;
+  padding-left: 300px;
+}
+
+/* To do */
+
+.container-text {
+  font-size: 20px;
+}
+
+.container-text h4 {
+  font-size: 25px;
+}
+
+.container-text p {
+  font-size: 20px;
+}
+
+/* To do */
+
+.line-div2 {
+  position: relative;
+}
+
+.line-div2:after {
+  content: "";
+  position: absolute;
+}
+
+.line-div2,
+.line-div2:after {
+  height: 80px;
+  width: 100%;
+}
+
+@media (min-width: 520px) {
+  .line-div2,
+  .line-div2:after {
+    height: 120px;
+  }
+}
+
+@media (min-width: 900px) {
+  .line-div2,
+  .line-div2:after {
+    height: 160px;
+  }
+}
+
+.line-div2 {
+  background-color: white;
+}
+
+.line-div2:after {
+  background-color: #e6c3be;
+  -webkit-clip-path: polygon(100% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 100%, 0 100%, 0 0);
+}
+
+.languages-wrapper {
+  background-color: #e6c3be;
+}
+
+.languages-container h2 {
+  padding-left: 300px;
+}
+
+.languages-container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.icon1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.devicon-html5-plain {
+  font-size: 4rem;
+}
+.icon2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.devicon-css3-plain {
+  font-size: 4rem;
+}
+.icon3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.devicon-javascript-plain {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.devicon-react-original {
+  font-size: 4rem;
+}
+.icon5 {
+  grid-area: 1 / 5 / 2 / 6;
+}
+.devicon-typescript-plain {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon6 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.devicon-git-plain {
+  font-size: 4rem;
+}
+.icon7 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.devicon-github-original {
+  font-size: 4rem;
+}
+.icon8 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.devicon-tailwindcss-plain {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon9 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.devicon-wordpress-plain {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon10 {
+  grid-area: 2 / 5 / 3 / 6;
+}
+.devicon-php-plain {
+  font-size: 4rem;
+}
+
+.line-div3 {
+  position: relative;
+}
+
+.line-div3:after {
+  content: "";
+  position: absolute;
+}
+
+.line-div3,
+.line-div3:after {
+  height: 80px;
+  width: 100%;
+}
+
+@media (min-width: 520px) {
+  .line-div3,
+  .line-div3:after {
+    height: 120px;
+  }
+}
+
+@media (min-width: 900px) {
+  .line-div3,
+  .line-div3:after {
+    height: 160px;
+  }
+}
+
+.line-div3 {
+  background-color: white;
+}
+
+.line-div3:after {
+  background-color: #e6c3be;
+  -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
+  clip-path: polygon(100% 100%, 100% 0, 0 0);
+}
