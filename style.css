@@ -17,6 +17,10 @@
   /* add more */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: white;
 }
@@ -133,16 +137,86 @@ h1 {
   margin: 0;
 }
 
-h2 {
-  font-family: var(--ff-title);
-  padding: 1rem;
-}
-
 .my-name-container {
   padding: 7rem;
   display: grid;
   justify-content: center;
   align-items: center;
+}
+
+.name-wrapper {
+  display: flex;
+  height: 61px;
+  line-height: 61px;
+  overflow: hidden;
+}
+
+.name-wrapper span {
+  font-size: 60px;
+  font-family: var(--ff-title), sans-serif;
+  color: white;
+}
+
+.name-wrapper #and {
+  padding-right: 20px;
+}
+
+.name-wrapper li span {
+  position: relative;
+  animation: slide 15s steps(5) infinite;
+  top: 0;
+}
+
+@keyframes slide {
+  100% {
+    top: -385px;
+  }
+}
+
+.name-wrapper li span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 550px;
+  height: 90px;
+  background-color: #bee1e6;
+  border-left: 5px solid white;
+  animation: typing 1.5s steps(15) infinite alternate;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .name-wrapper li span {
+    animation: none;
+    font-size: 40px;
+  }
+
+  .name-wrapper span::before {
+    display: none;
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .name-wrapper span {
+    font-size: 40px;
+  }
+}
+
+.name-options {
+  display: inline;
 }
 
 .line-div {
@@ -188,23 +262,22 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 300px;
-  padding-right: 300px;
+
   gap: 2rem;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 
-.details-container h2 {
-  margin: 0.5rem;
-  padding-left: 300px;
-}
-
-.details-container h3 {
-  margin: 0.5rem;
-  padding-left: 300px;
+.about-me-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
 }
 
 /* To do */
+
+@media (min-width: 900px) {
+}
 
 .container-text {
   font-size: 20px;
@@ -261,10 +334,13 @@ h2 {
 
 .languages-wrapper {
   background-color: #e6c3be;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
 }
 
-.languages-container h2 {
-  padding-left: 300px;
+@media (min-width: 900px) {
+  /* turn grid icons */
 }
 
 .languages-container p {
@@ -280,6 +356,7 @@ h2 {
   align-items: center;
   gap: 3rem;
   padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .icon1 {
@@ -386,6 +463,7 @@ h2 {
 
 .line-div3 {
   background-color: white;
+  padding-bottom: 200px;
 }
 
 .line-div3:after {
@@ -393,3 +471,206 @@ h2 {
   -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
   clip-path: polygon(100% 100%, 100% 0, 0 0);
 }
+
+input {
+  display: none;
+}
+
+.project-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform-style: preserve-3d;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.cards {
+  position: relative;
+  height: 550px;
+  width: 900px;
+  margin-bottom: 20px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.cards label {
+  position: absolute;
+  width: 700px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.55s ease;
+}
+
+.cards .card {
+  position: relative;
+  height: 100%;
+  background-color: #d2d2d2;
+  border-radius: 5px;
+  padding: 30px 35px;
+}
+
+.card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .image img {
+  border-radius: 5px;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
+  margin-top: 23px;
+  width: 86%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card .infos {
+  display: block;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.infos span {
+  display: block;
+}
+
+.infos .name {
+  font-size: 30px;
+  color: black;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
+  font-family: var(--ff-title);
+}
+
+.infos .lorem {
+  font-size: 15px;
+  color: black;
+  font-family: var(--ff-base);
+}
+
+.card .socials {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+#s2:checked ~ .cards #slide3 {
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(-70%, 0, -220px);
+  --current-color1: #eceaed;
+  --current-color2: #404457;
+}
+
+#s1:checked ~ .cards #slide3,
+#s2:checked ~ .cards #slide1 {
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(-35%, 0, -120px);
+  --current-color1: #eceaed;
+  --current-color2: #404457;
+}
+
+#s1:checked ~ .cards #slide2,
+#s3:checked ~ .cards #slide1 {
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(35%, 0, -120px);
+  --current-color1: #eceaed;
+  --current-color2: #404457;
+}
+
+#s3:checked ~ .cards #slide2 {
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+  transform: translate3d(70%, 0, -220px);
+  --current-color1: #eceaed;
+  --current-color2: #404457;
+}
+
+.container button {
+  background: #3c6e71;
+  background-image: -webkit-linear-gradient(top, #3c6e71, #404457);
+  background-image: -moz-linear-gradient(top, #3c6e71, #404457);
+  background-image: -ms-linear-gradient(top, #3c6e71, #404457);
+  background-image: -o-linear-gradient(top, #3c6e71, #404457);
+  background-image: linear-gradient(to bottom, #3c6e71, #404457);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.container button:hover {
+  background: #3c6e71;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.line-div4 {
+  position: relative;
+}
+
+.line-div4:after {
+  content: "";
+  position: absolute;
+}
+
+.line-div4,
+.line-div4:after {
+  height: 80px;
+  width: 100%;
+}
+
+@media (min-width: 520px) {
+  .line-div4,
+  .line-div4:after {
+    height: 120px;
+  }
+}
+
+@media (min-width: 900px) {
+  .line-div4,
+  .line-div4:after {
+    height: 160px;
+  }
+}
+
+.line-div4:after {
+  background-color: rgb(174, 239, 174);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.contact-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+  background-color: rgb(174, 239, 174);
+}
+
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.contact-form {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
