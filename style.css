@@ -539,6 +539,8 @@ h1 {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     scale: 90%;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
   }
 }
 
@@ -602,6 +604,7 @@ input {
   flex-direction: column;
   background-color: white;
   overflow-x: hidden;
+  padding-bottom: 5px;
 }
 
 .container h2 {
@@ -681,6 +684,148 @@ input {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+}
+
+@media (max-width: 1080px) {
+  .cards {
+    position: relative;
+    height: 550px;
+    width: 600px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    padding-bottom: 20px;
+    transform-style: preserve-3d;
+  }
+}
+
+@media (max-width: 1080px) {
+  .cards label {
+    position: absolute;
+    width: 500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+  }
+}
+@media (max-width: 1080px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 615px) {
+  .cards {
+    position: relative;
+    height: 550px;
+    width: 600px;
+    perspective: 1000px;
+    padding-bottom: 20px;
+    transform-style: preserve-3d;
+    scale: 90%;
+  }
+}
+
+@media (max-width: 615px) {
+  .cards label {
+    position: absolute;
+    width: 500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+    scale: 90%;
+  }
+}
+@media (max-width: 615px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    scale: 90%;
+  }
+}
+
+@media (max-width: 415px) {
+  .cards {
+    position: relative;
+    height: 550px;
+    width: 500px;
+    perspective: 1000px;
+    padding-bottom: 20px;
+    transform-style: preserve-3d;
+    scale: 90%;
+  }
+}
+
+@media (max-width: 415px) {
+  .cards label {
+    position: absolute;
+    width: 380px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+    scale: 90%;
+  }
+}
+@media (max-width: 415px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden;
+    scale: 90%;
+  }
+}
+
+@media (max-width: 415px) {
+  .project-wrapper h2 {
+    font-family: var(--ff-title);
+    font-size: 32px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 615px) {
+  .line-div3 {
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-wrapper {
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    scale: 90%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
 }
 
 #s2:checked ~ .cards #slide3 {
