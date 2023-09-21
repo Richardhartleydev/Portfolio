@@ -357,6 +357,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    scale: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-img-profile {
+    scale: 86%;
   }
 }
 
@@ -840,19 +847,20 @@ input {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 450px) {
   .cards {
     position: relative;
-    height: 550px;
+    height: 560px;
     width: 500px;
     perspective: 1000px;
     padding-bottom: 20px;
     transform-style: preserve-3d;
     scale: 90%;
+    padding-top: 0;
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 450px) {
   .cards label {
     position: absolute;
     width: 380px;
@@ -865,11 +873,12 @@ input {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 450px) {
   .project-wrapper h2 {
     font-family: var(--ff-title);
     font-size: 32px;
     padding-bottom: 0px;
+    z-index: 1;
   }
 }
 
@@ -1141,10 +1150,4 @@ form select {
     align-self: center;
     text-align: center;
   }
-}
-
-.container-img-profile img {
-  max-width: 300px;
-  max-height: 300px;
-  border-radius: 50%;
 }
