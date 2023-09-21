@@ -1142,3 +1142,9 @@ form select {
     text-align: center;
   }
 }
+
+.container-img-profile img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+}
